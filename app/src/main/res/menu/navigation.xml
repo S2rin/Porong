@@ -4,25 +4,25 @@
     <item
         android:id="@+id/i_music"
         android:checked="true"
-        android:icon="@drawable/ic_audiotrack_black_24dp"
-        android:title="@string/music" />
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/home" />
 
     <item
         android:id="@+id/i_backup"
-        android:icon="@drawable/ic_backup_black_24dp"
-        android:title="@string/backup" />
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/search" />
 
     <item
         android:id="@+id/i_friends"
-        android:icon="@drawable/ic_camera_black_24dp"
-        android:title="@string/friends" />
+        android:icon="@drawable/ic_upload_black_24dp"
+        android:title="@string/upload" />
     <item
         android:id="@+id/i_favor"
-        android:icon="@drawable/ic_favorite_black_24dp"
-        android:title="@string/favor" />
+        android:icon="@drawable/ic_thumb_up_black_24dp"
+        android:title="@string/recommend" />
     <item
         android:id="@+id/i_visibility"
-        android:icon="@drawable/ic_visibility_black_24dp"
-        android:title="@string/visibility" />
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="@string/mypage" />
 
 </menu>
