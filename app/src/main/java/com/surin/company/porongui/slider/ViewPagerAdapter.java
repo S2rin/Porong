@@ -13,6 +13,7 @@ import com.surin.company.porongui.R;
 
 /**
  * Created by surin on 2017. 9. 16..
+ * 메인 화면 View Pager Adapter
  */
 
 public class ViewPagerAdapter extends PagerAdapter {

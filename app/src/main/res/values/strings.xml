@@ -3,8 +3,25 @@
 
     <string name="music">Music</string>
     <string name="backup">Backup</string>
-    <string name="friends">Friends</string>
+    <string name="upload">Upload</string>
     <string name="favor">Favor</string>
     <string name="visibility">Visibility</string>
+
+    <!-- 소리 업로드 -->
+    <string name="explain_choose_tags">원하는 태그를 선택하세요</string>
+    <string name="sound_title">제목을 입력하세요</string>
+    <string name = "make_new_album">새 앨범 만들기</string>
+    <string name = "album_title_hint">앨범명</string>
+    <string name = "ok">확인</string>
+    <string name = "cancel">취소</string>
+    <string name= "confirm_upload">업로드</string>
+    <string name = "my_pictures">내 앨범에서 선택</string>
+    <string name = "basic_image">기본 이미지</string>
+
+    <!-- 녹음 -->
+    <string name = "start">시작</string>
+    <string name = "stop">중지</string>
+    <string name = "reset">초기화</string>
+
 
 </resources>

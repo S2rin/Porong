@@ -13,9 +13,9 @@
         android:title="@string/backup" />
 
     <item
-        android:id="@+id/i_friends"
+        android:id="@+id/upload"
         android:icon="@drawable/ic_camera_black_24dp"
-        android:title="@string/friends" />
+        android:title="@string/upload" />
     <item
         android:id="@+id/i_favor"
         android:icon="@drawable/ic_favorite_black_24dp"

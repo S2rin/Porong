@@ -193,11 +193,12 @@ public class MainActivity extends AppCompatActivity{
                     case R.id.i_music:
                         break;
                     case R.id.i_backup:
-                        intent = new Intent(MainActivity.this, SearchActivity.class);
+                        intent = new Intent(getApplicationContext(), SearchActivity.class);
                         startActivity(intent);
-                        finish();
                         break;
-                    case R.id.i_friends:
+                    case R.id.upload:
+                        intent = new Intent(getApplicationContext(), UploadActivity_1.class);
+                        startActivity(intent);
                         break;
                     case R.id.i_favor:
                         break;

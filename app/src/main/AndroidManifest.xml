@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.SearchActivity"></activity>
+        <activity android:name=".activity.SearchActivity"/>
+        <activity android:name=".activity.UploadActivity_1"/>
+        <activity android:name=".activity.UploadActivity_2"/>
 
     </application>
 

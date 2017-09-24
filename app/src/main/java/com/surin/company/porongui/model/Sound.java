@@ -5,4 +5,5 @@ package com.surin.company.porongui.model;
  */
 
 public abstract class Sound {
+    String title;
 }

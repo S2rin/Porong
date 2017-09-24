@@ -40,7 +40,7 @@ public class SearchActivity extends AppCompatActivity {
                         break;
                     case R.id.i_backup:
                         break;
-                    case R.id.i_friends:
+                    case R.id.upload:
                         break;
                     case R.id.i_favor:
                         break;

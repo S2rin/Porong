@@ -21,4 +21,8 @@ public class GridViewHolder extends RecyclerView.ViewHolder{
         textViewNum = (TextView) itemView.findViewById(R.id.textViewNum);
         textViewTitle = (TextView) itemView.findViewById(R.id.textViewTitle);
     }
+
+
+
+
 }
