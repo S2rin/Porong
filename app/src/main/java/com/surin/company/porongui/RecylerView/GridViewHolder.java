@@ -18,8 +18,8 @@ public class GridViewHolder extends RecyclerView.ViewHolder{
     public GridViewHolder(View itemView) {
         super(itemView);
 
-        textViewNum = (TextView) itemView.findViewById(R.id.textViewNum);
-        textViewTitle = (TextView) itemView.findViewById(R.id.textViewTitle);
+        textViewNum = itemView.findViewById(R.id.textViewNum);
+        textViewTitle = itemView.findViewById(R.id.textViewTitle);
     }
 
 

@@ -223,7 +223,7 @@ public class MainActivity extends AppCompatActivity{
         int id = item.getItemId();
 
         switch (id){
-            case R.id.home:
+            case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;
             case R.id.action_settings:

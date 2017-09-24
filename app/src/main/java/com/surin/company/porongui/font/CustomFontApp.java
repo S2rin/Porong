@@ -15,6 +15,7 @@ public class CustomFontApp extends Application{
 
         //Typekit
         Typekit.getInstance()
+                .addNormal(Typekit.createFromAsset(this,"fonts/IropkeBatangM.ttf"));
                 .addCustom1(Typekit.createFromAsset(this, "fonts/IropkeBatangM.ttf"));
 
     }

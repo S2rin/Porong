@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">포롱</string>
 
-    <string name="music">Music</string>
-    <string name="backup">Backup</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
     <string name="upload">Upload</string>
-    <string name="favor">Favor</string>
-    <string name="visibility">Visibility</string>
+    <string name="recommend">Recommend</string>
+    <string name="mypage">MyPage</string>
 
     <!-- 소리 업로드 -->
     <string name="explain_choose_tags">원하는 태그를 선택하세요</string>
