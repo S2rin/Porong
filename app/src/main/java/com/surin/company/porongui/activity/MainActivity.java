@@ -1,6 +1,5 @@
 package com.surin.company.porongui.activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,23 +14,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 import com.surin.company.porongui.R;
-import com.surin.company.porongui.RecylerView.SoundAdapter;
-import com.surin.company.porongui.RecylerView.TagAdapter;
+import com.surin.company.porongui.adapter.SoundAdapter;
+import com.surin.company.porongui.adapter.TagAdapter;
 import com.surin.company.porongui.model.SoundListItem;
 import com.surin.company.porongui.model.TagListItem;
-import com.surin.company.porongui.navigation.BottomNavigation;
-import com.surin.company.porongui.slider.ViewPagerAdapter;
-import com.tsengvn.typekit.TypekitContextWrapper;
+import com.surin.company.porongui.UI.BottomNavigation;
+import com.surin.company.porongui.UI.ViewPagerAdapter;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -54,11 +61,20 @@ public class MainActivity extends AppCompatActivity{
     private int dotscount;
     private ImageView[] dots;
 
+    //PlayBar
+    private SlidingUpPanelLayout mLayout;
+    private TextView title, artist;
+    private Button play, playlist;
+    private static final String TAG = "PORONG";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /**
+         *  header Navigation (Toolbar)
+         */
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
@@ -102,7 +118,9 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        //NOTE: TagRecyclerView
+        /**
+         * Hot Tag & Hot Sound Chart (recyclerView)
+         */
         tagRecyclerView = (RecyclerView) findViewById(R.id.tagRecylerView);
         tagRecyclerView.setHasFixedSize(true);
 
@@ -134,9 +152,10 @@ public class MainActivity extends AppCompatActivity{
         adapter = new SoundAdapter(soundListItemList, this);
         soundRecyclerView.setAdapter(adapter);
 
-        //NOTE: Navigation Adapter Setting
+        /**
+         * Image Slider - Hot Place()
+         */
         viewPager = (ViewPager) findViewById(R.id.viewPager);
-
         sliderDotspanel = (LinearLayout) findViewById(R.id.SliderDots);
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
@@ -180,6 +199,72 @@ public class MainActivity extends AppCompatActivity{
         Timer timer  = new Timer();
         timer.scheduleAtFixedRate(new MyTimerTask(), 2000, 4000);
 
+        /**
+         * Play Bar (Sliding Up Panel)
+         */
+        title = (TextView) findViewById(R.id.title);
+        artist = (TextView) findViewById(R.id.artist);
+        play = (Button) findViewById(R.id.btn_play);
+        playlist = (Button) findViewById(R.id.btn_playlist);
+
+        //NOTE: Play시, 제목 및 타이틀 변경
+        title.setText("제목은20자이내로설정해야합니다.");
+        artist.setText("포롱인");
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: Play the Sound
+                Log.d(TAG, "onClick: play");
+            }
+        });
+        playlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: Show recyclerView up!
+                Log.d(TAG, "onClick: playlist");
+            }
+        });
+
+        final List<String> array_list = Arrays.asList(
+                "This", "Is", "An", "Example", "ListView", "That", "You",
+                "Can", "Scroll", ".", "It", "Child", "Of", "SlidingUpPanelLayout");
+
+        ListView lv = (ListView) findViewById(R.id.list);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(MainActivity.this, array_list.get(i).toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, array_list );
+
+        lv.setAdapter(arrayAdapter);
+
+        mLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
+        mLayout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
+            @Override
+            public void onPanelSlide(View panel, float slideOffset) {
+                Log.i(TAG, "onPanelSlide, offset " + slideOffset);
+            }
+
+            @Override
+            public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
+                Log.i(TAG, "onPanelStateChanged " + newState);
+            }
+        });
+
+        mLayout.setFadeOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
+            }
+        });
+
+        /**
+         * Bottom Navigation
+         */
         BottomNavigation bn = new BottomNavigation();
         bn.bnve = (BottomNavigationViewEx) findViewById(R.id.bnve);
         bn.navigationInit(bn.bnve);
@@ -190,18 +275,18 @@ public class MainActivity extends AppCompatActivity{
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Intent intent;
                 switch (item.getItemId()) {
-                    case R.id.i_music:
+                    case R.id.i_home:
                         break;
-                    case R.id.i_backup:
+                    case R.id.i_search:
                         intent = new Intent(MainActivity.this, SearchActivity.class);
                         startActivity(intent);
                         finish();
                         break;
-                    case R.id.i_friends:
+                    case R.id.i_upload:
                         break;
-                    case R.id.i_favor:
+                    case R.id.i_recommend:
                         break;
-                    case R.id.i_visibility:
+                    case R.id.i_mypage:
                         break;
                 }
 
@@ -211,9 +296,20 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
+    //Sliding Up Panel...
+    @Override
+    public void onBackPressed() {
+        if (mLayout != null &&
+                (mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.EXPANDED || mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.ANCHORED)) {
+            mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.action_overflow_menu, menu);
         return true;
     }
 
@@ -226,15 +322,10 @@ public class MainActivity extends AppCompatActivity{
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;
             case R.id.action_settings:
+                Toast.makeText(getApplicationContext(),"설정",Toast.LENGTH_SHORT).show();
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    //TypeKit
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 
     public class MyTimerTask extends TimerTask{

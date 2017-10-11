@@ -4,9 +4,10 @@
     <color name="colorPrimaryDark">#4faca5</color>
     <color name="colorAccent">#4faca5</color>
 
-    <!--Bottom Navigation-->
+    
     <color name="colorGray">#ccc</color>
     <color name="colorWhite">#FFF</color>
-
     <color name="colorBlack">#000</color>
+    
+    <color name="transparent">#00FF0000</color>
 </resources>

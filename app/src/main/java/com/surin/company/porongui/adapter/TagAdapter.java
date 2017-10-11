@@ -1,7 +1,8 @@
-package com.surin.company.porongui.RecylerView;
+package com.surin.company.porongui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,6 @@ public class TagAdapter extends RecyclerView.Adapter<GridViewHolder>{
     @Override
     public void onBindViewHolder(GridViewHolder holder, int position) {
         TagListItem tagListItem = listItems.get(position);
-
         holder.textViewNum.setText(tagListItem.getNum());
         holder.textViewTitle.setText(tagListItem.getTitle());
     }

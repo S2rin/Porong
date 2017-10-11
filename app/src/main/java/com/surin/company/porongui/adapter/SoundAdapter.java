@@ -1,4 +1,4 @@
-package com.surin.company.porongui.RecylerView;
+package com.surin.company.porongui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

@@ -1,4 +1,4 @@
-package com.surin.company.porongui.slider;
+package com.surin.company.porongui.UI;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;

@@ -2,26 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/i_music"
+        android:id="@+id/i_home"
         android:checked="true"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/home" />
 
     <item
-        android:id="@+id/i_backup"
+        android:id="@+id/i_search"
         android:icon="@drawable/ic_search_black_24dp"
         android:title="@string/search" />
 
     <item
-        android:id="@+id/i_friends"
+        android:id="@+id/i_upload"
         android:icon="@drawable/ic_upload_black_24dp"
         android:title="@string/upload" />
     <item
-        android:id="@+id/i_favor"
+        android:id="@+id/i_recommend"
         android:icon="@drawable/ic_thumb_up_black_24dp"
         android:title="@string/recommend" />
+
     <item
-        android:id="@+id/i_visibility"
+        android:id="@+id/i_mypage"
         android:icon="@drawable/ic_person_black_24dp"
         android:title="@string/mypage" />
 

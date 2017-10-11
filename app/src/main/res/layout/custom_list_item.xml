@@ -13,7 +13,7 @@
         card_view:cardCornerRadius="0dp">
 
         <GridLayout
-            android:padding="15dp"
+            android:padding="@dimen/dimen_16_dp"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">

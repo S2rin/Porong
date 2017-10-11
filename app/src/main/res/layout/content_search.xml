@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </include>
+
+    <include
+        layout="@layout/app_bar_search"
+        android:id="@+id/Search"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/search_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Search">
+        <TextView
+            android:id="@+id/searchstr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/Search"
+            android:layout_margin="16dp"
+            android:text="@string/recent"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/dimen_15_sp"/>
+
+        <Button
+            android:id="@+id/delete_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_8_dp"
+            android:layout_below="@+id/search_recycler"
+            android:background="@color/transparent"
+            android:text="@string/delete_all_search"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dimen_11_sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
