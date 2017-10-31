@@ -3,16 +3,58 @@
     <!-- APP Name-->
     <string name="app_name">포롱</string>
 
+    <!-- Tag Name -->
+    <string name="season">계절</string>
+    <string name="spring">봄</string>
+    <string name="summer">여름</string>
+    <string name="fall">가을</string>
+    <string name="winter">겨울</string>
+    <string name="nature">자연</string>
+    <string name="mountain">산</string>
+    <string name="sea">바다</string>
+    <string name="forest">숲</string>
+    <string name="valley">계곡</string>
+    <string name="animal">동물</string>
+    <string name="weather">날씨</string>
+    <string name="wind">바람</string>
+    <string name="rain">비</string>
+    <string name="thunder">천둥</string>
+    <string name="day">낮</string>
+    <string name="night">밤</string>
+    <string name="dawn">새벽</string>
+    <string name="sound">소리</string>
+    <string name="white_noise">백색소음</string>
+    <string name="stillness">고요함</string>
+    <string name="noisy">시끄러움</string>
+    <string name="instrument">악기</string>
+    <string name="outside">야외</string>
+    <string name="city">도시</string>
+    <string name="camping">캠핑</string>
+    <string name="street">거리</string>
+    <string name="festival">축제</string>
+    <string name="no_category">그 외</string>
+    <string name="cook">요리</string>
+    <string name="exotic">이국적인</string>
+    <string name="traditional">전통적인</string>
+    <string name="etc">기타등등</string>
+    
+    
     <!-- Bottom Navigation-->
     <string name="home">Home</string>
     <string name="search">Search</string>
     <string name="upload">Upload</string>
     <string name="recommend">Recommend</string>
     <string name="mypage">MyPage</string>
+    
+    <!-- Play Bottom Navigation -->
+    <string name="listening">듣기</string>
+    <string name="add_playlist">재생목록에 추가</string>
 
     <!-- Home-->
     <string name="view_more">더보기</string>
     <string name="settings">설정</string>
+    <string name="search_description">지원하지 않는 기능입니다. 11월 30일 정식 오픈까지 기다려주시면 감사하겠습니다.</string>
+    <string name="ok">확인</string>
 
     <!-- Search -->
     <string name="recent">최근 검색어</string>
@@ -22,5 +64,14 @@
     <string name="delete_dialog_content">검색 기록을 모두 삭제하시겠습니까?</string>
     <string name="cancel">취소</string>
     <string name="delete">삭제</string>
+
+    <!-- Settings -->
+    <string name="login">로그인</string>
+    <string name="logout">로그아웃</string>
+    <string name="delete_account">탈퇴하기</string>
+    <string name="porong_info">포롱정보</string>
+
+    <!-- Internet Access -->
+    <string name="internet_description">인터넷 연결이 되어 있지 않습니다.</string>
 
 </resources>

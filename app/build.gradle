@@ -32,20 +32,24 @@ dependencies {
     compile 'com.android.support:support-v4:26.1.0'
     testCompile 'junit:junit:4.12'
 
-    //Bottom Navigation
+    //Bottom Navigation(MIT)'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
     compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
 
     //RecylerView & CardView
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.android.support:cardview-v7:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
     //RealmRecyclerView
     compile 'io.realm:android-adapters:2.1.0'
 
-    //AlertDialog
+    //AlertDialog(Apache2.0)
     compile 'com.github.javiersantos:MaterialStyledDialogs:2.1'
 
-    //MusicPlayBar
+    //MusicPlayBar(Apache2.0)
     compile 'com.sothree.slidinguppanel:library:3.4.0'
+
+    //Restofit2
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
 }

@@ -114,7 +114,7 @@ public class SearchActivity extends AppCompatActivity {
         Toolbar hToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(hToolbar);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_action_menu);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowTitleEnabled(false);
 
@@ -129,26 +129,9 @@ public class SearchActivity extends AppCompatActivity {
 
                 int id = item.getItemId();
                 switch (id) {
-                    case R.id.navigation_item_attachment1:
-                        Toast.makeText(SearchActivity.this, item.getTitle(), Toast.LENGTH_LONG).show();
+                    default:
+                        showDialog();
                         break;
-
-                    case R.id.navigation_item_attachment2:
-                        Toast.makeText(SearchActivity.this, item.getTitle(), Toast.LENGTH_LONG).show();
-                        break;
-
-                    case R.id.navigation_item_attachment3:
-                        Toast.makeText(SearchActivity.this, item.getTitle(), Toast.LENGTH_LONG).show();
-                        break;
-
-                    case R.id.navigation_item_attachment4:
-                        Toast.makeText(SearchActivity.this, item.getTitle(), Toast.LENGTH_LONG).show();
-                        break;
-
-                    case R.id.navigation_item_attachment5:
-                        Toast.makeText(SearchActivity.this, item.getTitle(), Toast.LENGTH_LONG).show();
-                        break;
-
                 }
                 return true;
             }
@@ -265,7 +248,8 @@ public class SearchActivity extends AppCompatActivity {
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;
             case R.id.action_settings:
-                Toast.makeText(getApplicationContext(),"설정",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(SearchActivity.this,SettingsActivity.class);
+                startActivity(intent);
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -293,7 +277,7 @@ public class SearchActivity extends AppCompatActivity {
 
         MaterialStyledDialog dialog = new MaterialStyledDialog.Builder(this)
                 .setTitle(R.string.information)
-                .setIcon(R.drawable.ic_info)
+                .setIcon(R.drawable.ic_info_black_24dp)
                 .setDescription(R.string.delete_dialog_content)
                 .setCancelable(true)
                 .setPositiveText(R.string.delete)
@@ -308,6 +292,17 @@ public class SearchActivity extends AppCompatActivity {
                 .withIconAnimation(false)
                 .show();
 
+    }
+
+    public void showDialog() {
+        MaterialStyledDialog dialog = new MaterialStyledDialog.Builder(this)
+                .setTitle(R.string.information)
+                .setIcon(R.drawable.ic_info_black_24dp)
+                .setDescription(R.string.search_description)
+                .setCancelable(true)
+                .setPositiveText(R.string.ok)
+                .withIconAnimation(false)
+                .show();
     }
 
     public boolean checkString(String str){

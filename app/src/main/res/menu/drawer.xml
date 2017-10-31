@@ -1,35 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/navigation_item_attachment1"
-            android:checked="true"
-            android:icon="@drawable/ic_favorite_black_24dp"
-            android:title="태그1"/>
-        <item
-            android:id="@+id/navigation_item_attachment2"
-            android:checked="true"
-            android:icon="@drawable/ic_thumb_up_black_24dp"
-            android:title="태그2"/>
-        <item
-            android:id="@+id/navigation_item_attachment3"
-            android:checked="true"
-            android:icon="@drawable/ic_person_black_24dp"
-            android:title="태그3"/>
+    <group>
+
+        <item android:title="@string/season">
+            <menu>
+                <item
+                android:icon="@drawable/ic_leaf"
+                android:id="@+id/item_spring"
+                android:title="@string/spring"/>
+
+                <item
+                    android:icon="@drawable/ic_landscape"
+                    android:id="@+id/item_summer"
+                    android:title="@string/summer"/>
+
+                <item
+                    android:icon="@drawable/ic_leaves"
+                    android:id="@+id/item_fall"
+                    android:title="@string/fall"/>
+
+                <item
+                    android:icon="@drawable/ic_deer"
+                    android:id="@+id/item_winter"
+                    android:title="@string/winter"/>
+            </menu>
+        </item>
+
+        <item android:title="@string/nature">
+            <menu>
+                <item
+                    android:icon="@drawable/ic_snowy_mountains"
+                    android:id="@+id/item_mountain"
+                    android:title="@string/mountain"/>
+
+                <item
+                    android:icon="@drawable/ic_oyster"
+                    android:id="@+id/item_sea"
+                    android:title="@string/sea"/>
+
+                <item
+                    android:icon="@drawable/ic_forest"
+                    android:id="@+id/item_forest"
+                    android:title="@string/forest"/>
+
+                <item
+                    android:icon="@drawable/ic_river"
+                    android:id="@+id/item_valley"
+                    android:title="@string/valley"/>
+
+                <item
+                    android:icon="@drawable/ic_pawprint"
+                    android:id="@+id/item_animal"
+                    android:title="@string/animal"/>
+            </menu>
+        </item>
+
+        <item android:title="@string/weather">
+            <menu>
+                <item
+                    android:icon="@drawable/ic_weathercock"
+                    android:id="@+id/item_wind"
+                    android:title="@string/wind"/>
+
+                <item
+                    android:icon="@drawable/ic_umbrella"
+                    android:id="@+id/item_rain"
+                    android:title="@string/rain"/>
+
+                <item
+                    android:icon="@drawable/ic_flash"
+                    android:id="@+id/item_thunder"
+                    android:title="@string/thunder"/>
+
+                <item
+                    android:icon="@drawable/ic_sun"
+                    android:id="@+id/item_day"
+                    android:title="@string/day"/>
+
+                <item
+                    android:icon="@drawable/ic_night"
+                    android:id="@+id/item_night"
+                    android:title="@string/night"/>
+
+                <item
+                    android:icon="@drawable/ic_sunrise"
+                    android:id="@+id/item_dawn"
+                    android:title="@string/dawn"/>
+            </menu>
+        </item>
+
+        <item android:title="@string/sound">
+            <menu>
+                <item
+                    android:icon="@drawable/ic_sound_frecuency"
+                    android:id="@+id/item_white_noise"
+                    android:title="@string/white_noise"/>
+
+                <item
+                    android:icon="@drawable/ic_park"
+                    android:id="@+id/item_stillness"
+                    android:title="@string/stillness"/>
+
+                <item
+                    android:icon="@drawable/ic_finger_up"
+                    android:id="@+id/item_noisy"
+                    android:title="@string/noisy"/>
+
+                <item
+                    android:icon="@drawable/ic_acoustic_guitar"
+                    android:id="@+id/item_instrument"
+                    android:title="@string/instrument"/>
+            </menu>
+        </item>
+
+        <item android:title="@string/outside">
+            <menu>
+                <item
+                    android:icon="@drawable/ic_cityscape"
+                    android:id="@+id/item_city"
+                    android:title="@string/city"/>
+
+                <item
+                    android:icon="@drawable/ic_camping"
+                    android:id="@+id/item_camping"
+                    android:title="@string/camping"/>
+
+                <item
+                    android:icon="@drawable/ic_street"
+                    android:id="@+id/item_street"
+                    android:title="@string/street"/>
+
+                <item
+                    android:icon="@drawable/ic_party"
+                    android:id="@+id/item_festival"
+                    android:title="@string/festival"/>
+            </menu>
+        </item>
+
+        <item android:title="@string/no_category">
+            <menu>
+                <item
+                    android:icon="@drawable/ic_stew"
+                    android:id="@+id/item_cook"
+                    android:title="@string/cook"/>
+
+                <item
+                    android:icon="@drawable/ic_world"
+                    android:id="@+id/item_exotic"
+                    android:title="@string/exotic"/>
+
+                <item
+                    android:icon="@drawable/ic_flower"
+                    android:id="@+id/item_traditional"
+                    android:title="@string/traditional"/>
+
+                <item
+                    android:icon="@drawable/ic_etc"
+                    android:id="@+id/item_etc"
+                    android:title="@string/etc"/>
+            </menu>
+        </item>
     </group>
-
-    <item android:title="subMenu">
-        <menu>
-            <item
-            android:icon="@drawable/ic_home_black_24dp"
-            android:id="@+id/navigation_item_attachment4"
-            android:title="태그4"/>
-
-            <item
-                android:icon="@drawable/ic_audiotrack_black_24dp"
-                android:id="@+id/navigation_item_attachment5"
-                android:title="태그5"/>
-        </menu>
-    </item>
 </menu>

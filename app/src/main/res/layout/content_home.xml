@@ -31,15 +31,13 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/dimen_16_dp">
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewPager"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="fitXY">
-            </android.support.v4.view.ViewPager>
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dimen_200_dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -105,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/view_more2"
-                android:layout_marginBottom="@dimen/dimen_5_dp">
+                android:layout_marginBottom="@dimen/dimen_58_dp">
             </android.support.v7.widget.RecyclerView>
 
         </RelativeLayout>
@@ -117,6 +115,6 @@
     <include layout="@layout/sliding_layout"
         android:id="@+id/dragView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </com.sothree.slidinguppanel.SlidingUpPanelLayout>

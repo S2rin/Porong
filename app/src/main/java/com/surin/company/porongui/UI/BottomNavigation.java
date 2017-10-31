@@ -34,6 +34,4 @@ public class BottomNavigation {
         bnve.setItemHeight(BottomNavigationViewEx.dp2px(bnve.getContext(), 56));
         bnve.setIconsMarginTop(BottomNavigationViewEx.dp2px(bnve.getContext(), 16));
     }
-
-    //NOTE: Navigation Listener
 }

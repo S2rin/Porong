@@ -50,7 +50,7 @@ public class Divider extends RecyclerView.ItemDecoration{
             bottom = top + mDivider.getIntrinsicHeight();
             mDivider.setBounds(left,top,right,bottom);
             mDivider.draw(c);
-            Log.d(TAG, "drawHorizontalDivider: l:" + left + " t: " + top + " r: " + right + " b: " + bottom);
+//            Log.d(TAG, "drawHorizontalDivider: l:" + left + " t: " + top + " r: " + right + " b: " + bottom);
         }
     }
 
