@@ -6,7 +6,7 @@
     android:gravity="bottom"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.surin.company.porongui.activity.MainActivity"
+    tools:context=".activity.MainActivity"
     sothree:umanoPanelHeight="@dimen/dimen_58_dp"
     sothree:umanoShadowHeight="@dimen/dimen_5_dp"
     sothree:umanoParallaxOffset="@dimen/dimen_100_dp"

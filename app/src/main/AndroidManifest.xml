@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.surin.company.porongui" >
+    package="com.goldhands.porong">
 
+    <!-- permission -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".realm.baseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".activity.MainActivity"
-            android:label="@string/app_name" >
+        <activity android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,9 +26,54 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.SearchActivity"/>
-        <activity android:name=".activity.SettingsActivity"/>
-        <activity android:name=".activity.InternetActivity"/>
+        <activity android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MyPageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.InternetActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.UploadListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.RecommendActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.SignupActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SignupActivity_2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.upload.UploadActivity_1"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.upload.UploadActivity_2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.upload.UploadActivity_3"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.upload.UploadActivity_4"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.recommend.SpringActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.recommend.SummerActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.recommend.FallActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.recommend.WinterActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.recommend.MountainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.recommend.ValleyActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.recommend.SeaActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.recommend.ForestActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.recommend.CityActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.recommend.TradiActivity" android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.goldhands.porong"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
 
     </application>
 

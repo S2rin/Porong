@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimaryLight">#d7ebef</color>
     <color name="colorPrimary">#81cbc7</color>
     <color name="colorPrimaryDark">#4faca5</color>
-    <color name="colorAccent">#4faca5</color>
+    <color name="colorAccent2">#4faca5</color>
+    <color name="colorAccent">#F2CB61</color>
+    <color name="colorGreen">#304b4a</color>
 
     <color name="darkGray">#5D5D5D</color>
     <color name="colorGray">#ccc</color>
     <color name="colorWhite">#FFF</color>
     <color name="colorBlack">#000</color>
-    
+
     <color name="transparent">#00FF0000</color>
+    <color name="transparent2">#00a5a4a4</color>
+
+    <color name="colorPrimaryDark2">#304b4a</color>
+    <color name="colorPrimaryDark3">#213332</color>
+
+    <!--login-->
+    <color name = "startColor">#002661</color>
+    <color name = "endColor">#92FFC0</color>
+
+    <color name = "startColor2">#64b2f4</color>
+    <color name = "endColor2">#c2de9b</color>
 </resources>

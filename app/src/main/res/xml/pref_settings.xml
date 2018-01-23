@@ -3,10 +3,6 @@
     <PreferenceCategory android:title="설정">
 
         <Preference
-            android:title="@string/login"
-            android:key="loginSet"/>
-
-        <Preference
             android:title="@string/logout"
             android:key="logoutSet"/>
 

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:background="#A6e2f1fb">
+
+        <!-- layout -->
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_23_sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/register_title"
+                android:text="@string/register"/>
+
+            <!-- layout1 -->
+            <RelativeLayout
+                android:id="@+id/layout1"
+                android:layout_below="@id/register_title"
+                android:layout_marginTop="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/email"
+                    android:textSize="@dimen/register_textSize"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_email"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/textView_email"
+                    android:textSize="@dimen/dimen_13_sp"
+                    android:hint="@string/signup_hint2" />
+
+                <Button
+                    android:id="@+id/checkEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/edit_email"
+                    android:background="@drawable/button3"
+                    android:text="@string/check_email"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+            </RelativeLayout>
+
+            <!-- layout2 -->
+            <RelativeLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/textView_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/password"
+                    android:textSize="@dimen/register_textSize"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="@dimen/register_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:textSize="@dimen/dimen_15_sp"
+                    android:inputType = "textPassword"
+                    android:layout_toEndOf="@+id/textView_password" />
+
+            </RelativeLayout>
+
+            <!-- layout3 -->
+            <RelativeLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout2"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/textView_birth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/birth"
+                    android:textSize="@dimen/register_textSize"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_birth"
+                    android:layout_width="@dimen/register_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:textSize="@dimen/dimen_15_sp"
+                    android:layout_toEndOf="@+id/textView_birth"
+                    android:hint="@string/signup_hint3" />
+
+            </RelativeLayout>
+
+            <!-- layout4 -->
+            <RelativeLayout
+                android:id="@+id/layout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout3"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/textView_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/nickname"
+                    android:textSize="@dimen/register_textSize"
+                    android:textStyle="bold" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edit_nickname"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:textSize="@dimen/dimen_15_sp"
+                    android:layout_toEndOf="@+id/textView_nickname"
+                    app:met_maxCharacters="15" />
+
+                <Button
+                    android:id="@+id/checkNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_nickname"
+                    android:background="@drawable/button3"
+                    android:text="@string/check_nickname"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/gotoNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button2"
+                android:text="@string/gotoNext"
+                android:textColor="@color/colorWhite"
+                style="?android:attr/borderlessButtonStyle"
+                android:textSize="@dimen/dimen_18_dp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

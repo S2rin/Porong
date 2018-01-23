@@ -37,15 +37,15 @@
     <string name="exotic">이국적인</string>
     <string name="traditional">전통적인</string>
     <string name="etc">기타등등</string>
-    
-    
+
+
     <!-- Bottom Navigation-->
     <string name="home">Home</string>
     <string name="search">Search</string>
     <string name="upload">Upload</string>
     <string name="recommend">Recommend</string>
     <string name="mypage">MyPage</string>
-    
+
     <!-- Play Bottom Navigation -->
     <string name="listening">듣기</string>
     <string name="add_playlist">재생목록에 추가</string>
@@ -66,12 +66,78 @@
     <string name="delete">삭제</string>
 
     <!-- Settings -->
-    <string name="login">로그인</string>
     <string name="logout">로그아웃</string>
     <string name="delete_account">탈퇴하기</string>
     <string name="porong_info">포롱정보</string>
 
     <!-- Internet Access -->
     <string name="internet_description">인터넷 연결이 되어 있지 않습니다.</string>
+
+    <!-- 로그인&회원가입-->
+    <string name="login">로그인</string>
+    <string name="findid">아이디 찾기</string>
+    <string name="findpw">비밀번호 찾기</string>
+    <string name="slash">/</string>
+    <string name="notyet">아직 회원이 아니신가요?</string>
+    <string name="register">회원가입</string>
+    <string name="email">이메일</string>
+    <string name="signup_hint1">이메일 주소</string>
+    <string name="signup_hint2">porong@porong.com</string>
+    <string name="password">비밀번호</string>
+    <string name="birth">생년월일</string>
+    <string name="nickname">닉네임</string>
+    <string name="nickname_hint">활동명(15자 이내)</string>
+    <string name="check_nickname">중복 확인</string>
+    <string name="prefer_tag">선호 태그</string>
+    <string name="gotoNext">다음으로</string>
+    <string name="signup_hint3">태어난 년도 (예시: 1995)</string>
+    <string name="datePicker">날짜 선택</string>
+    <string name="check_email">계정 유무 확인</string>
+
+    <!-- 소리 업로드 -->
+    <string name="explain_choose_tags">원하는 태그를 선택하세요</string>
+    <string name="sound_title">제목을 입력하세요</string>
+    <string name="make_new_album">새 앨범 만들기</string>
+    <string name="album_title_hint">앨범명</string>
+    <string name="confirm_upload">업로드</string>
+    <string name="my_pictures">다른 사진 선택하기</string>
+    <string name="basic_image">기본 이미지</string>
+
+    <!-- 플레이리스트 메뉴 -->
+    <string name="go_to_dj">디제이 보러가기</string>
+    <string name="go_to_album">앨범 보러가기</string>
+    <string name="accuse">신고하기</string>
+    <string name="add_to_playlist">플레이리스트에 추가</string>
+
+    <!-- TagNames(for Singup & Upload) -->
+    <string name="tag">태그 선택(최대 5개까지)</string>
+    <string name="tag1">봄</string>
+    <string name="tag2">여름</string>
+    <string name="tag3">가을</string>
+    <string name="tag4">겨울</string>
+    <string name="tag5">산</string>
+    <string name="tag6">바다</string>
+    <string name="tag7">계곡</string>
+    <string name="tag8">동물</string>
+    <string name="tag9">숲</string>
+    <string name="tag10">백색소음</string>
+    <string name="tag11">도시</string>
+    <string name="tag12">캠핑</string>
+    <string name="tag13">비</string>
+    <string name="tag14">천둥</string>
+    <string name="tag15">번개</string>
+    <string name="tag16">바람</string>
+    <string name="tag17">밤</string>
+    <string name="tag18">낮</string>
+    <string name="tag19">새벽</string>
+    <string name="tag20">거리</string>
+    <string name="tag21">이국적인</string>
+    <string name="tag22">페스티벌</string>
+    <string name="tag23">전통적인</string>
+    <string name="tag24">악기</string>
+    <string name="tag25">고요한</string>
+    <string name="tag26">요리</string>
+    <string name="tag27">시끄러운</string>
+    <string name="tag28">etc</string>
 
 </resources>

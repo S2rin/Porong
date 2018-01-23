@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/upload_toolbar"
+            layout="@layout/app_bar_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upload_toolbar"
+            android:layout_margin="10dp">
+
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:scaleX="0.75"
+                android:scaleY="0.75"
+                android:src="@mipmap/microphone" />
+
+            <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image1"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:format="%s초"
+            android:textSize="40sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/body1"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/start"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/ic_record"/>
+
+
+            <ImageButton
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="60dp"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/ic_refresh"/>
+
+            <ImageButton
+                android:id="@+id/stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="60dp"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/ic_stop" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/bnve"
+        style="@style/bnve_white_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/selector_item_primary_color"
+        app:itemTextColor="@color/selector_item_primary_color"
+        app:menu="@menu/navigation" />
+
+</RelativeLayout>

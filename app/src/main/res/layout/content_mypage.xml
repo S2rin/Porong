@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/mypage_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 프로필 구역 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    card_view:cardCornerRadius="@dimen/dimen_10_dp"
+                    card_view:cardElevation="@dimen/dimen_10_dp"
+                    android:layout_margin="@dimen/dimen_5_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7"
+                            android:background="@color/white">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/chu"
+                                android:id="@+id/proimg"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/colorWhite"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/dimen_2_dp">
+
+                                <TextView
+                                    android:paddingTop="@dimen/dimen_10_dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="닉네임"
+                                    android:textSize="@dimen/dimen_15_sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorBlack"/>
+
+                                <TextView
+                                    android:paddingTop="@dimen/dimen_10_dp"
+                                    android:paddingLeft="@dimen/dimen_10_dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="불꽃카리스마 파이리"
+                                    android:textSize="@dimen/dimen_15_sp"
+                                    android:textColor="@color/colorBlack"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/colorWhite"
+                                android:padding="@dimen/dimen_2_dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="소  개"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/dimen_15_sp"
+                                    android:textColor="@color/colorBlack"/>
+
+                                <TextView
+                                    android:paddingLeft="@dimen/dimen_10_dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/dimen_15_sp"
+                                    android:text="와이파이 그리고 포롱과 함께라면 어디든 갈 수 있어!"
+                                    android:textColor="@color/colorBlack"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"
+                                android:gravity="right">
+
+                                <Button
+                                    android:id="@+id/edit_pro_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="EDIT" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <!-- 좋아요 모아보기 구역 -->
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/myal_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dimen_10_dp"
+                        android:text="My albums"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/dimen_20_sp"
+                        android:textStyle="bold"
+
+                        android:clickable="true"/>
+
+                    <TextView
+                        android:id="@+id/album_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textSize="@dimen/dimen_20_sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="@dimen/dimen_20_dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/likes_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dimen_10_dp"
+                        android:text="Likes"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/dimen_20_sp"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/likes_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="46"
+                        android:textSize="@dimen/dimen_20_sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignBaseline="@+id/likes_tv"
+                        android:paddingRight="@dimen/dimen_20_dp"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tagtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dimen_10_dp"
+                        android:text="My Favorite tags"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/dimen_20_sp"
+                        android:textStyle="bold" />
+
+                    <com.adroitandroid.chipcloud.ChipCloud
+                        android:layout_centerInParent="true"
+                        android:id="@+id/chip_cloud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
